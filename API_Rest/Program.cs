@@ -14,24 +14,6 @@ builder.Services.AddSwaggerGen(c =>
         Title = "API системы прогресса",
         Description = "—истема выполнени€ заданий и разблокировки изображений"
     });
-    c.SwaggerDoc("v2", new OpenApiInfo
-    {
-        Version = "v2",
-        Title = "API системы прогресса",
-        Description = "—истема выполнени€ заданий и разблокировки изображений"
-    });
-    c.SwaggerDoc("v3", new OpenApiInfo
-    {
-        Version = "v3",
-        Title = "API системы прогресса",
-        Description = "—истема выполнени€ заданий и разблокировки изображений"
-    });
-    c.SwaggerDoc("v4", new OpenApiInfo
-    {
-        Version = "v4",
-        Title = "API системы прогресса",
-        Description = "—истема выполнени€ заданий и разблокировки изображений"
-    });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
@@ -45,10 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "«апросы GET");
-        c.SwaggerEndpoint("/swagger/v2/swagger.json", "«апросы POST");
-        c.SwaggerEndpoint("/swagger/v3/swagger.json", "«апросы PUT");
-        c.SwaggerEndpoint("/swagger/v4/swagger.json", "«апросы DELETE");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "«апросы");
     });
 }
 else
