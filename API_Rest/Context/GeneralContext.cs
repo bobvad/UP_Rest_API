@@ -6,10 +6,12 @@ namespace API_Rest.Context
     public class GeneralContext: DbContext
     {
         public DbSet<Users> Users { get; set; }
+        public DbSet<Puzzles> Puzzles { get; set; }
         public GeneralContext()
         {
             Database.EnsureCreated();
             Users.Load();
+            Puzzles.Load();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

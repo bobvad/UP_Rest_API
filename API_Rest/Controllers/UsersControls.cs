@@ -1,5 +1,4 @@
-﻿using System.Net;
-using API_Rest.Context;
+﻿using API_Rest.Context;
 using API_Rest.Models;
 using Microsoft.AspNetCore.Mvc;
 
