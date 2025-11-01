@@ -1,0 +1,73 @@
+﻿<Page x:Class="GameKAn.Pages.ReginPol"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameKAn.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReginPol" Background="Black">
+
+
+    <Grid>
+        <Border Width="400" Height="480"
+                Background="#1A1A1A"
+                CornerRadius="15"
+                Padding="25"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderBrush="#444"
+                BorderThickness="1">
+            <StackPanel>
+
+                <Image Source="C:\Users\student-a502.PERMAVIAT\Desktop\Новая папка\UP_Rest_API\GameKAn\Images\Knight2.png"
+                       Width="80"
+                       Height="80"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+               
+                <TextBlock Text="Создание аккаунта"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+
+                
+                <TextBlock Text="Имя персонажа"
+                           Foreground="#AAA"
+                           FontSize="13"/>
+                <TextBox x:Name="RegUsernameBox"
+                         Style="{StaticResource DarkTextBoxStyle}"/>
+
+              
+                <TextBlock Text="Пароль"
+                           Foreground="#AAA"
+                           FontSize="13"/>
+                <PasswordBox x:Name="RegPasswordBox"
+                             Style="{StaticResource DarkPasswordBoxStyle}"/>
+
+                
+                <TextBlock Text="Подтвердите пароль"
+                           Foreground="#AAA"
+                           FontSize="13"/>
+                <PasswordBox x:Name="ConfirmPasswordBox"
+                             Style="{StaticResource DarkPasswordBoxStyle}"/>
+
+               
+                <Button Content="Зарегистрироваться"
+                        Style="{StaticResource DarkButtonStyle}"
+                        Click="OnRegisterClick"
+                        Height="40"
+                        Margin="0,10"/>
+
+               
+                <Button Content="Уже есть аккаунт? Войти"
+                        Style="{StaticResource DarkOutlineButtonStyle}"
+                        Click="OnGoToLoginClick"
+                        Height="36"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
