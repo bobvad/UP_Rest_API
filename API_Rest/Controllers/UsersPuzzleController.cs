@@ -24,7 +24,7 @@ namespace API_Rest.Controllers
                         CreatedDate = DateTime.Now
                     };
 
-                    context.UsersPuzzles.Add(userPuzzle);
+                    context.UserPuzzles.Add(userPuzzle);
                     context.SaveChanges();
 
                     return Json(new
@@ -52,7 +52,7 @@ namespace API_Rest.Controllers
             {
                 using (GeneralContext context = new GeneralContext())
                 {
-                    var userPuzzles = context.UsersPuzzles
+                    var userPuzzles = context.UserPuzzles
                         .Where(x => x.UserId == userId)
                         .Join(context.Puzzles,
                             up => up.PuzzleId,

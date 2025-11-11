@@ -9,7 +9,7 @@ namespace API_Rest.Context
         public DbSet<Puzzles> Puzzles { get; set; }
         public DbSet<UserGallery> UsersGallerys { get; set; }
         public DbSet<UserPiece> UserPieces { get; set; }
-        public DbSet<UserPuzzle> UsersPuzzles {  get; set; }
+        public DbSet<UserPuzzle> UserPuzzles {  get; set; }
         public GeneralContext()
         {
             Database.EnsureCreated();
